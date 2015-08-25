@@ -39,35 +39,10 @@ add_executable_for_each_rmw_implementations(listener_erle
 ## Examples of Request/Response with Services
 ##
 
-#add_executable_for_each_rmw_implementations(add_two_ints_client
-#  src/services/add_two_ints_client.cpp
-#  TARGET_DEPENDENCIES ${target_dependencies} INSTALL)
-#add_executable_for_each_rmw_implementations(add_two_ints_client_async
-#  src/services/add_two_ints_client_async.cpp
-#  TARGET_DEPENDENCIES ${target_dependencies} INSTALL)
-#add_executable_for_each_rmw_implementations(add_two_ints_server
-#  src/services/add_two_ints_server.cpp
-#  TARGET_DEPENDENCIES ${target_dependencies} INSTALL)
+
 
 ##
 ## Examples of Parameters with Asynchronous and Synchronous
 ##
 
-#add_executable_for_each_rmw_implementations(list_parameters
-#  src/parameters/list_parameters.cpp
-#  TARGET_DEPENDENCIES ${target_dependencies} INSTALL)
-#add_executable_for_each_rmw_implementations(list_parameters_async
-#  src/parameters/list_parameters_async.cpp
-#  TARGET_DEPENDENCIES ${target_dependencies} INSTALL)
-#add_executable_for_each_rmw_implementations(parameter_events
-#  src/parameters/parameter_events.cpp
-#  TARGET_DEPENDENCIES ${target_dependencies} INSTALL)
-#add_executable_for_each_rmw_implementations(parameter_events_async
-#  src/parameters/parameter_events_async.cpp
-#  TARGET_DEPENDENCIES ${target_dependencies} INSTALL)
-#add_executable_for_each_rmw_implementations(set_and_get_parameters
-#  src/parameters/set_and_get_parameters.cpp
-#  TARGET_DEPENDENCIES ${target_dependencies} INSTALL)
-#add_executable_for_each_rmw_implementations(set_and_get_parameters_async
-#  src/parameters/set_and_get_parameters_async.cpp
-#  TARGET_DEPENDENCIES ${target_dependencies} INSTALL)
+
