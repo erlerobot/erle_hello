@@ -15,13 +15,13 @@
 #include <iostream>
 #include <memory>
 
-#include <rclcpp/rclcpp.hpp>
+#include "rclcpp/rclcpp.hpp"
 
-#include <std_msgs/msg/string.hpp>
+#include "std_msgs/msg/string.hpp"
 
-void chatterCallback(const std_msgs::msg::String::ConstSharedPtr & msg)
+void chatterCallback(const std_msgs::msg::String::SharedPtr msg)
 {
-  std::cout << "Hi! I heard: [" << msg->data << "]" << std::endl;
+  std::cout << "I heard: [" << msg->data << "]" << std::endl;
 }
 
 int main(int argc, char * argv[])
@@ -30,7 +30,7 @@ int main(int argc, char * argv[])
   auto node = rclcpp::Node::make_shared("listener");
 
   auto sub = node->create_subscription<std_msgs::msg::String>(
-    "chatter", rmw_qos_profile_default, chatterCallback);
+    "chatter", chatterCallback, rmw_qos_profile_default);
 
   rclcpp::spin(node);
 
